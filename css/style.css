@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: white;
   overflow-x: hidden;
@@ -6,33 +12,34 @@ body {
 header {
   background-image: url("../images/header-background.png");
   width: 100vw;  
+  height: 30vh;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-   
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
 div.logo {
   width: 23%;
+  height: 30%;
   padding: 1%;
   text-align: center;
   display: flex;  
 }
-.navcontainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 li{
   display: inline-block;      
   vertical-align: top;  
 }
 nav{
   width: 70%;
+  height: 30%;
   padding: 1%;
   display: flex;
-  /* right: 0 */   
+  
 }
 ul{
   width: 50%;
@@ -43,32 +50,49 @@ a{
   color: black;
   text-decoration: none;
   margin-left: 24px; }     
-h1 {
+.tagline {
   font-family: Public Sans ;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  line-height: 1.5em;
   color: black;
   text-align: center;
   margin:auto;
-  width: 496px;
-  height: 168px;      
-  text-align: center;
-  } 
-
+  width: 100%; 
+  height: fit-content;
+  max-height: 70%; 
+  font-size: xx-large;
   
-.heroImg{
-  height: 529.98px;
+  text-align: center;
+  padding: 5%;
+  } 
+  h1 {
+    font-family: Public Sans ;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: black;
+    text-align: center;
+    margin:auto;
+    width: 100%; 
+    height: 30%;
+    font-size: xx-large;
+    
+    text-align: center;
+    
+    } 
+  
+.heroSection{
+  height: 70vh;
   padding: 5% ;
   width:90vw;
   margin: 0 auto;
   } 
-.image {
-  display: inline-block;       
+.heroImage {
+  display: inline-block;   
+      
    }
     
 .content {
-  max-width: 30%;
+  width: 30%;
   /* float:right; */
   display: inline-block;
   vertical-align: top;
@@ -80,9 +104,8 @@ h1 {
   line-height:24px ;
   font-weight: 400;
   font-style: normal;
-  color:black;         
-  width: 698.53px;
-  height: 144px;
+  color:black;  
+ 
   }
     
   /*My skill section */
@@ -119,6 +142,7 @@ h3 {
   justify-content: space-around;
   align-items: flex-start;
   align-content: normal;
+  padding: 5%;
   }
     
 .skills-text{
@@ -189,33 +213,74 @@ footer {
 
 
   }
-
-
-@media only screen and (max-width: 600px) {
-  
-
-
-    .skills{
-      background: #FFFFFF; 
-      display: flex;
-      flex-direction: row;
-      width: 100vw;
-      justify-content: space-between;
-      margin-bottom: 10%;
-      }
-
-    .work-container { 
-      width: 100vw;
-      display: grid;
-      grid-template-columns: 12fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 5%;
-      grid-auto-flow: row;
-      grid-template-areas:
-      "cs1 cs2 cs3";
-      }
-    
+  @media only screen and (max-width: 1000px) {
+    body {
+      background-color: aqua;
+    }
   }
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    padding-top: 5%;
+    width: 100%;
+    height: 70%;
+  }
+  .heroSection{
+      display: flex;
+      flex-direction: column;
+    }  
+  .heroImage {
+      display: flex;
+      margin: auto;
+      padding: 30px;
+    }
+
+  .content {
+      width: 90%;          
+      display: flex;
+      flex-direction: column;      
+      margin: 5%;
+      justify-content: center;
+
+    }    
+  
+   
+      .skills {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center ;
+        margin-bottom: 10%;
+        margin: 10px;
+        padding: 30px;}
+
+        .card-content{
+          width: 90%;    
+          
+          }
+
+
+    h3 {
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: black;
+      margin: auto;}
+
+  .work-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;}
+
+.mockup {
+  width: 100%;
+  height: 60%;
+  padding: 40px;}
+    
+}
  
  
  
